@@ -3,13 +3,21 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledImage = styled.div`
+    .img-wrapper {
+        overflow: hidden;
+    }
+
     img {
-        width: 150%;
+        width: 145%;
     }
 
     @media (min-width: 720px) {
+        .img-wrapper {
+            overflow: visible;
+        }
+
         img {
-            width: 210%;
+            width: 250%;
         }
     }
 `;
@@ -17,11 +25,13 @@ const StyledImage = styled.div`
 const InfoImageComponent = () => {
     return (
         <StyledImage>
-            <img
-                src="../../images/illustration-working.svg"
-                alt="illustration working"
-                className="d-inline-block align-top"
-            ></img>
+            <div className="img-wrapper">
+                <img
+                    src="../../images/illustration-working.svg"
+                    alt="illustration working"
+                    className=""
+                ></img>
+            </div>
         </StyledImage>
     );
 };

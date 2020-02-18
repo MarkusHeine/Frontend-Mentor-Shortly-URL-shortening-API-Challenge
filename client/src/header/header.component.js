@@ -3,6 +3,10 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import styled from "styled-components";
 
 const StyledNav = styled.div`
+    .navbar {
+        width: 100vw;
+    }
+
     .navbar-light,
     .navbar-toggler,
     .nav-link {
