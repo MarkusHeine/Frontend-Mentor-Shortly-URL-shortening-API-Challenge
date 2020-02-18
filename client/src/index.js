@@ -19,9 +19,17 @@ const Styles = styled.div`
         background-color: hsl(180, 66%, 49%);
         padding: 10px 20px !important;
         margin: 10px 0;
-        border-radius: 50px;
         font-family: "Poppins", sans-serif !important;
         color: white !important;
+        border: 0;
+    }
+
+    .btn-pill {
+        border-radius: 50px;
+    }
+
+    .btn-rounded {
+        border-radius: 0.25em;
     }
 
     .btn-width-100 {

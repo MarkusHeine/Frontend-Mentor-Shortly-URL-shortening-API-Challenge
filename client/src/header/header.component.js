@@ -91,7 +91,7 @@ const Header = () => {
                         <Nav.Link href="#login">Login</Nav.Link>
                         <Nav.Link
                             as="button"
-                            className="btn-main btn-width-100"
+                            className="btn-main btn-width-100 btn-pill"
                             href="#register"
                         >
                             Sign up

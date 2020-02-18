@@ -14,7 +14,7 @@ const InfoTextComponent = () => {
                         Build your brand’s recognition and get detailed insights
                         on how your links are performing.
                     </p>
-                    <button className="btn-main">Get Started</button>
+                    <button className="btn-main btn-pill">Get Started</button>
                 </Row>
             </Container>
         </StyledText>
