@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledImage = styled.div`
     .img-wrapper {
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     img {

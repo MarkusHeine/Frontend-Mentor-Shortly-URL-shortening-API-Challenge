@@ -17,10 +17,26 @@ const Styles = styled.div`
     .btn-main {
         background-color: hsl(180, 66%, 49%);
         padding: 10px 20px !important;
-        width: 100%;
+        margin: 10px 0;
         border-radius: 50px;
         font-family: "Poppins", sans-serif !important;
         color: white !important;
+    }
+
+    .btn-width-100 {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    p {
+        text-align: center;
+        color: hsl(0, 0%, 75%);
+        font-size: 1.1rem;
+        margin: 10px 0;
     }
 
     @media (min-width: 720px) {
