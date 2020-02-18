@@ -17,7 +17,7 @@ const StyledImage = styled.div`
         }
 
         img {
-            width: 250%;
+            width: 170%;
         }
     }
 `;

@@ -12,6 +12,7 @@ const Styles = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        overflow-x: hidden;
     }
 
     .btn-main {
@@ -46,6 +47,16 @@ const Styles = styled.div`
 
         .btn-main:active {
             background-color: #80e5e5 !important;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 5rem;
+        }
+
+        p {
+            text-align: left;
+            font-size: 1.5rem;
         }
     }
 `;

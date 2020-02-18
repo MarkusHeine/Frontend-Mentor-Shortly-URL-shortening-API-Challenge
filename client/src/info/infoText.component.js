@@ -8,7 +8,7 @@ const InfoTextComponent = () => {
     return (
         <StyledText>
             <Container>
-                <Row className="d-flex flex-direction-column justify-content-center">
+                <Row className="d-flex flex-direction-column justify-content-center justify-content-md-start">
                     <h1>More than just shorter Links</h1>
                     <p>
                         Build your brand’s recognition and get detailed insights
