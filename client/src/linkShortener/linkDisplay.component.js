@@ -1,38 +1,42 @@
-import React, { useContext, useEffect } from "react";
-import { LinkContext } from "./linkContext.provider";
+import React, { useEffect } from "react";
 import { Container, Row, Button } from "react-bootstrap";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
-const LinkDisplay = ({ link: { url, hashid } }) => {
-    const { links } = useContext(LinkContext);
+const StyledDisplay = styled.div`
+    .border-2 {
+        border-width: 2px !important;
+    }
+`;
 
+const LinkDisplay = ({ link: { hashid, url } }) => {
     const handleClick = () => {
         console.log("copy that shit");
     };
 
-    useEffect(() => {
-        console.log("props", url, hashid);
-    });
-
     return (
-        <Row className="m-1 pt-4 pb-4 mb-4 border border-rounded">
-            <Container>
-                <Row className="d-flex justify-content-center">
-                    <p>{url}</p>
-                </Row>
-                <Row className="d-flex justify-content-center">
-                    <p>{`https://rel.ink/${hashid}`}</p>
-                </Row>
-                <Row className="d-flex justify-content-center m-1">
-                    <Button
-                        className="btn-main btn-width-100 mt-3 btn-rounded"
-                        onClick={handleClick}
-                    >
-                        Copy
-                    </Button>
-                </Row>
-            </Container>
-        </Row>
+        <StyledDisplay>
+            <Row className="m-1 mb-4 border border-rounded">
+                <Container>
+                    <Row className="px-3 border-bottom border-2">
+                        <p className="text-left text-truncate font-weight-bold text-dark">
+                            {url}
+                        </p>
+                    </Row>
+                    <Row className="px-3">
+                        <p className="text-left">{`https://rel.ink/${hashid}`}</p>
+                    </Row>
+                    <Row className="d-flex justify-content-center">
+                        <Button
+                            className="btn-main mx-3 btn-width-100  btn-rounded"
+                            onClick={handleClick}
+                        >
+                            Copy
+                        </Button>
+                    </Row>
+                </Container>
+            </Row>
+        </StyledDisplay>
     );
 };
 

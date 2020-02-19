@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { Container, Col, Row } from "react-bootstrap";
 import InputField from "./inputField.component";

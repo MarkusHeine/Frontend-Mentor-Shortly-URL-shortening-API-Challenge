@@ -30,6 +30,8 @@ const InputField = () => {
             url: data
         };
 
+        console.log(linkObj);
+
         setLinks([...links, linkObj]);
     };
 
