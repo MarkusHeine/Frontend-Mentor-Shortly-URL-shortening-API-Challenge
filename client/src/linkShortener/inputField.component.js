@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import { LinkContext } from "./linkContext.provider";
 
 const InputField = () => {
     const [link, setLink] = useState({
         url:
             "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
     });
+    const { links, setLinks } = useContext(LinkContext);
 
     const onChange = e => {
         setLink({ [e.target.name]: e.target.value });
@@ -13,7 +15,6 @@ const InputField = () => {
 
     const handleClick = async e => {
         e.preventDefault();
-        console.log(link);
         const resp = await fetch("https://rel.ink/api/links/", {
             method: "POST",
             headers: {
@@ -22,7 +23,7 @@ const InputField = () => {
             body: JSON.stringify(link)
         });
         const data = await resp.json();
-        console.log("data", data);
+        setLinks([...links, data]);
     };
 
     return (
