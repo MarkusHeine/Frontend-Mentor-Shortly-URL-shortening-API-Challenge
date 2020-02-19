@@ -29,9 +29,6 @@ const InputField = () => {
             id: uuidv4(),
             url: data
         };
-
-        console.log(linkObj);
-
         setLinks([...links, linkObj]);
     };
 

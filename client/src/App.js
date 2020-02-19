@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./header/header.component";
-import Info from "./info/info.component";
-import LinkShortener from "./linkShortener/linkShortener.component";
+import Header from "./components/header/header.component";
+import Info from "./components/info/info.component";
+import LinkShortener from "./components/linkShortener/linkShortener.component";
 
 function App() {
     return (
