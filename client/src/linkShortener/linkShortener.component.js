@@ -20,11 +20,6 @@ const LinkShortener = () => {
     const [links, setLinks] = useState([]);
     const value = useMemo(() => ({ links, setLinks }), [links, setLinks]);
 
-    useEffect(() => {
-        console.log("links", links);
-        links.forEach(link => console.log(link.hashid));
-    }, [links]);
-
     return (
         <StyledShortener>
             <Container>
@@ -33,13 +28,13 @@ const LinkShortener = () => {
                         <Row className="m-1 pt-4 pb-4 mb-4 border bg-img border-rounded">
                             <InputField></InputField>
                         </Row>
-                        <Row className="m-1 pt-4 pb-4 mb-4 border border-rounded">
-                            {/* {links.length > 0 &&
-                                links.map(link => (
-                                
-                                  <LinkDisplay key=""></LinkDisplay>
-                                ))} */}
-                        </Row>
+                        {links.length > 0 &&
+                            links.map(link => (
+                                <LinkDisplay
+                                    key={link.id}
+                                    link={link.url}
+                                ></LinkDisplay>
+                            ))}
                     </LinkContext.Provider>
                 </Col>
             </Container>

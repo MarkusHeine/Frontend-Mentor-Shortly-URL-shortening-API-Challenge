@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { LinkContext } from "./linkContext.provider";
 
+const uuidv4 = require("uuid/v4");
+
 const InputField = () => {
     const [link, setLink] = useState({
         url:
@@ -23,7 +25,12 @@ const InputField = () => {
             body: JSON.stringify(link)
         });
         const data = await resp.json();
-        setLinks([...links, data]);
+        const linkObj = {
+            id: uuidv4(),
+            url: data
+        };
+
+        setLinks([...links, linkObj]);
     };
 
     return (
