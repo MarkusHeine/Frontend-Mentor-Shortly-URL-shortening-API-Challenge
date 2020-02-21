@@ -4,21 +4,7 @@ import InfoImageComponent from "./infoImage.component";
 import InfoTextComponent from "./infoText.component";
 import styled from "styled-components";
 
-const StyledInfo = styled.div`
-    .info {
-        max-width: 100vw;
-    }
-
-    .container {
-        margin-top: 10px;
-    }
-
-    @media (min-width: 720px) {
-        .container {
-            margin-top: 50px;
-        }
-    }
-`;
+const StyledInfo = styled.div``;
 
 const Info = () => {
     return (
@@ -28,7 +14,7 @@ const Info = () => {
                     <Col className="mt-5" xs={12} md={7}>
                         <InfoTextComponent></InfoTextComponent>
                     </Col>
-                    <Col xs={12} md={5}>
+                    <Col xs={12} md={5} className="pr-0">
                         <InfoImageComponent></InfoImageComponent>
                     </Col>
                 </Row>

@@ -29,7 +29,6 @@ const InfoImageComponent = () => {
                 <img
                     src="../../images/illustration-working.svg"
                     alt="illustration working"
-                    className=""
                 ></img>
             </div>
         </StyledImage>
