@@ -16,8 +16,8 @@ const LinkDisplay = ({ link: { hashid, url } }) => {
 
     return (
         <StyledDisplay>
-            <Row className="m-1 mb-4 border border-rounded">
-                <Container>
+            <Container fluid className="bg-grey">
+                <Row className="m-1 mb-4 border border-rounded">
                     <Row className="px-3 border-bottom border-2">
                         <p className="text-left text-truncate font-weight-bold text-dark">
                             {url}
@@ -34,8 +34,8 @@ const LinkDisplay = ({ link: { hashid, url } }) => {
                             Copy
                         </Button>
                     </Row>
-                </Container>
-            </Row>
+                </Row>
+            </Container>
         </StyledDisplay>
     );
 };

@@ -4,11 +4,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
+import { colors } from "./utils/colors";
 
 const Styles = styled.div`
     .App {
+        width: 100vw;
         font-family: "Poppins", sans-serif;
-        margin-top: 20px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -34,6 +35,16 @@ const Styles = styled.div`
 
     .btn-width-100 {
         width: 100%;
+    }
+
+    .bg-grey {
+        background-color: #e6e6e6;
+    }
+
+    a {
+        color: white !important;
+        font-weight: 700;
+        font-size: 1.2rem;
     }
 
     h1 {
