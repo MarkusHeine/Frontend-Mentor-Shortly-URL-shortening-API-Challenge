@@ -41,6 +41,10 @@ const Styles = styled.div`
         background-color: #e6e6e6;
     }
 
+    .container {
+        margin: 0 !important;
+    }
+
     a {
         color: white !important;
         font-weight: 700;
@@ -62,6 +66,10 @@ const Styles = styled.div`
     @media (min-width: 720px) {
         .App {
             align-items: center;
+        }
+
+        .btn-width-100 {
+            width: auto;
         }
 
         .btn-main:active {

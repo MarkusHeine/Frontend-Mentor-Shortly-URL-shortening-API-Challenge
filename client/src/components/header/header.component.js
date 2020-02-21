@@ -5,6 +5,8 @@ import { colors } from "../../utils/colors";
 
 const StyledNav = styled.div`
     width: 100%;
+    display: flex;
+    justify-content: center;
 
     .bg-navigation {
         background-color: ${colors.primary.darkViolet};

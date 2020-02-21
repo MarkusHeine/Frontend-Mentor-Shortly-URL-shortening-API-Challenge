@@ -5,24 +5,11 @@ import InputField from "./inputField.component";
 import LinkDisplay from "./linkDisplay.component";
 import { LinkContext } from "./linkContext.provider";
 
-const StyledShortener = styled.div`
-    .bg-hard-grey-grad {
-        background: linear-gradient(
-            white 0%,
-            white 50%,
-            #e6e6e6 50%,
-            #e6e6e6 100%
-        );
-    }
-
-    .bg-img {
-        background-color: hsl(257, 27%, 26%);
-        background-image: url("../../images/bg-shorten-mobile.svg");
-    }
-
-    .border-rounded {
-        border-radius: 10px;
-    }
+const StyledShortenerInput = styled.div`
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(white 0%, white 50%, #e6e6e6 50%, #e6e6e6 100%);
 `;
 
 const LinkShortener = () => {
@@ -30,13 +17,26 @@ const LinkShortener = () => {
     const value = useMemo(() => ({ links, setLinks }), [links, setLinks]);
 
     return (
-        <StyledShortener>
-            <Container fluid className="p-0 bg-hard-grey-grad">
-                <Col>
-                    <LinkContext.Provider value={value}>
-                        <Row className="m-1 pt-4 pb-4 mb-4 border bg-img border-rounded">
-                            <InputField></InputField>
-                        </Row>
+        <LinkContext.Provider value={value}>
+            <StyledShortenerInput>
+                <Container>
+                    <Row>
+                        <InputField></InputField>
+                    </Row>
+                    {/* <Row className="">
+                        <Col>
+                            <Row className="w-20 m-1 pt-4 pb-4 mb-4 border bg-img border-rounded">
+                                <Col>
+                                    <InputField></InputField>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row> */}
+
+                    {/* 
+                        <InputField></InputField>
+                    </Row>
+                    <Row>
                         {links.length > 0 &&
                             links.map(link => (
                                 <LinkDisplay
@@ -44,10 +44,10 @@ const LinkShortener = () => {
                                     link={link.url}
                                 ></LinkDisplay>
                             ))}
-                    </LinkContext.Provider>
-                </Col>
-            </Container>
-        </StyledShortener>
+                    </Row> */}
+                </Container>
+            </StyledShortenerInput>
+        </LinkContext.Provider>
     );
 };
 
